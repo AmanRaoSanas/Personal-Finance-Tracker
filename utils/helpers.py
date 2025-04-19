@@ -4,17 +4,22 @@ import os, json
 from datetime import datetime
 
 def add_transaction():
-    try:
-        amt = float(input("enter a amount "))
-    except ValueError:
-        print("Enter a valid ammount")
+    while True:
+        try:
+            amt = float(input("enter a amount "))
+            float(amt)
+            break
+        except ValueError:
+            print("Enter a valid ammount")
 
     cat = input("enter a category ")
-    date = input("enter date ")
-    try:
-        datetime.strptime(date,"%d/%m/%y")
-    except:
-        print("invalid date please enter date in dd/mm/yyyy")
+    while True:
+        try:
+            date = input("enter date ").strip()
+            datetime.strptime(date, "%d/%m/%Y")
+            break
+        except:
+            print("invalid date please enter date in dd/mm/yyyy")
     note = input("note ")
     obj = Transaction(amt,cat,date,note)
     return obj
@@ -60,4 +65,4 @@ def view_transaction(file="data/transaction.json"):
         for i in data:
             print(f"  {i["amount"]:<8} | {i["category"]:<10} | {i["date"]:^15} | {i["note"]:<10}")
     else:
-        print("There is no data ")
+        print(f"{"There is no data":-^30}")
