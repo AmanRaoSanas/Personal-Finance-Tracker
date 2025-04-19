@@ -2,9 +2,10 @@ from models.transaction import Transaction
 from utils.helpers import add_transaction as addT
 from utils.helpers import save_transaction as saveT
 from utils.helpers import load_transaction as loadT
+from utils.helpers import view_transaction as viewT
 
 def main():
-    print("-------------------Welcome----------------")
+    print(f"{'Welcome':-^60}")
 
     # obj = Transaction(500, "food", '17/04/2025', "at cafe")
     # print(obj)
@@ -21,7 +22,7 @@ def main():
             a = addT()
             saveT(a)
         elif option == 2:
-            print(loadT())
+            print(viewT())
         elif option == 3:
             print("Thanks")
             break
