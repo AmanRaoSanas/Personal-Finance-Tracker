@@ -1,6 +1,6 @@
 class Transaction:
-    def __init__(self,ammount, category, date, note=""):
-        self.ammount = ammount
+    def __init__(self,amount, category, date, note=""):
+        self.amount = amount
         self.category = category
         self.date = date
         self.note = note
@@ -9,4 +9,4 @@ class Transaction:
         return self.__dict__
 
     def __str__(self):
-        return(f"{self.ammount} {self.category} {self.date} {self.note}")
+        return(f"{self.amount} {self.category} {self.date} {self.note}")

@@ -1,26 +1,14 @@
 [
     {
-        "ammount": 500,
+        "amount": 500.0,
         "category": "food",
-        "date": "12/04/2025",
-        "note": "dinner"
+        "date": "12/03/2025",
+        "note": "lunch"
     },
     {
-        "ammount": 599,
-        "category": "clothing",
-        "date": "15/04/2025",
-        "note": "Zudio"
-    },
-    {
-        "ammount": 699,
-        "category": "clothing",
-        "date": "jeans",
+        "amount": 200.0,
+        "category": "food",
+        "date": "12/03/2024",
         "note": ""
-    },
-    {
-        "ammount": 500,
-        "category": "food",
-        "date": "12/04/2025",
-        "note": "dinner"
     }
 ]
