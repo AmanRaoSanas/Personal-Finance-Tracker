@@ -1,0 +1,38 @@
+[
+    {
+        "amount": 500.0,
+        "category": "food",
+        "date": "14/04/2025",
+        "note": "dinner"
+    },
+    {
+        "amount": 500.0,
+        "category": "food",
+        "date": "12/04/2023",
+        "note": "lunch"
+    },
+    {
+        "amount": 699.0,
+        "category": "clothes",
+        "date": "12/03/2024",
+        "note": ""
+    },
+    {
+        "amount": 500.0,
+        "category": "food",
+        "date": "11/03/2024",
+        "note": ""
+    },
+    {
+        "amount": 100.0,
+        "category": "Food",
+        "date": "12/03/2025",
+        "note": "breakfast"
+    },
+    {
+        "amount": 500,
+        "category": "Food",
+        "date": "12/04/2025",
+        "note": "Lunch"
+    }
+]

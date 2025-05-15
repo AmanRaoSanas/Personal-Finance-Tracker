@@ -8,29 +8,11 @@ class FinanceManager:
 # Class constructor
     def __init__(self):
         self.transaction_list = []
+        self.load_transaction()
 
 # method to add new transaction with user input
-    def add_transaction(self):
-    # data input validation open
-        while True:
-            try:
-                amt = float(input("enter a amount "))
-                float(amt)
-                break
-            except ValueError:
-                print("Enter a valid ammount")
-
-        cat = input("enter a category ")
-        while True:
-            try:
-                date = input("enter date ").strip()
-                datetime.strptime(date, "%d/%m/%Y")
-                break
-            except:
-                print("invalid date please enter date in dd/mm/yyyy")
-        note = input("note ")
-    # data input validation close
-        obj = Transaction(amt, cat, date, note)
+    def add_transaction(self, tx_obj):
+        obj = tx_obj
         self.transaction_list.append(obj.__dict__)
         # return obj
 

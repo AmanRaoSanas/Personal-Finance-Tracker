@@ -4,6 +4,7 @@ from utils.helpers import save_transaction as saveT
 from utils.helpers import load_transaction as loadT
 from utils.helpers import view_transaction as viewT
 from models.finance_manager import FinanceManager
+from datetime import datetime
 
 def main():
     print(f"{'Welcome':-^60}")
@@ -14,7 +15,27 @@ def main():
     while True:
         option = int(input("Enter the number of  your choice: \n1) Add Transaction \n2) View Transactions \n3) Save data \n4) Exit \n\nYour choice: "))
         if option == 1:
-            finc_obj.add_transaction()
+            # data input validation open
+            while True:
+                try:
+                    amt = float(input("enter a amount "))
+                    float(amt)
+                    break
+                except ValueError:
+                    print("Enter a valid ammount")
+
+            cat = input("enter a category ")
+            while True:
+                try:
+                    date = input("enter date ").strip()
+                    datetime.strptime(date, "%d/%m/%Y")
+                    break
+                except:
+                    print("invalid date please enter date in dd/mm/yyyy")
+            note = input("note ")
+            # data input validation close
+            obj = Transaction(amt, cat, date, note)
+            finc_obj.add_transaction(obj)
         elif option == 2:
             finc_obj.view_transaction()
         elif option == 3:
